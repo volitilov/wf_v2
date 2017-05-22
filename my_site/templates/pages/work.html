@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="col-md-12 page-header">
+	<h3>Example work</h3>
+	<ul class="site-breadcrumbs">
+		<li><a href="/">Home</a></li>
+		<li><i class="fa fa-angle-right"></i></li>
+		<li>Work</li>
+	</ul>
+</div>
+<div class="col-xs-12 content">
+	<div class="col-xs-12 template-body">
+		<div class="col-xs-12 col-md-8 template">
+			<img src="{{ work.img_big.url }}"/>
+		</div>
+		{% include 'components/_sidebar.html' %}
+	</div>
+</div>
+{% include 'components/_more.html' %}
+{% endblock %}

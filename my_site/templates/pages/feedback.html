@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<section class="feedback">
+		<img src="{% static 'img/foto.jpg' %}"/>
+		<p>Привет <font color="#22ACF5">{{ name|linebreaksbr }}</font>, твоё письмо полученно и будет просмотренно в ближайшее время,<br> если моего письма долго нету проверь папку спам.</p>
+		<p>А вообще я постоянно на всязи тут:</p>
+		<div class="col-xs-12 icon">
+			<a href="#" title="vk"><i class="fa fa-vk"></i></a>
+			<a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
+			<a href="#" title="google-plus"><i class="fa fa-google-plus"></i></a>
+			<a href="#" title="odnoklassniki"><i class="fa fa-odnoklassniki"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+		</div>
+		<div class="btn-line">
+			<a href="/" class="btn-blue">Home page</a>
+		</div>
+	</section>
+{% endblock content %}

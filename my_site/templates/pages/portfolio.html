@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="col-md-12 page-header">
+	<h3>My portfolio</h3>
+	<ul class="site-breadcrumbs">
+		<li><a href="/">Home</a></li>
+		<li><i class="fa fa-angle-right"></i></li>
+		<li>Portfolio</li>
+	</ul>
+</div>
+<div class="col-xs-12 content">
+	<ul>
+		{% for w in works %}
+			{% include 'components/_portfolio-item.html' %}
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

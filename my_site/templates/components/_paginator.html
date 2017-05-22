@@ -1,0 +1,23 @@
+<div class="pagination">
+	<span class="step-links">
+		{% if work.has_previous %}
+			<span>
+				<a class="control-left" href="?item={{ work.previous_page_number }}" role="button">
+					<span><i class="material-icons">chevron_left</i></span>
+				</a>
+			</span>
+		{% endif %}		
+
+		<span class="current">
+			Работа {{ work.number }} из {{ work.paginator.num_pages }}
+		</span>
+
+		{% if work.has_next %}
+			<span>
+				<a class="control-right" href="?item={{ work.next_page_number }}" role="button">
+					<span><i class="material-icons">chevron_right</i></span>
+				</a>
+			</span>
+		{% endif %}
+	</span>
+</div>

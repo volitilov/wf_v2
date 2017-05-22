@@ -1,0 +1,97 @@
+///////////////////////////////////////// default mobile devioces
+.contacts {
+	padding: 50px;
+	padding-left: 190px;
+	padding-right: 190px;
+	.or {
+		padding-top: 20px;
+		p {
+			color: rgb(2, 168, 243);
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+}
+.form-contacts {
+	padding: 0px;
+	form {
+		display: block;
+		width: 100%;
+		fieldset {
+			border: none;
+		}
+		legend {
+			display: none;
+		}
+		input {
+			display: inline-block;
+			color: #333;
+			transition: 0.3s;
+			padding-left: 20px;
+			width: 30%;
+			height: 40px;
+			margin: 10px;
+			border-radius: 4px;
+			background-color: transparent;
+			border: 1px solid #ddd;
+			font-size: 14px;
+			&:focus {
+				border-color: rgb(2, 168, 243);
+				-webkit-appearance: caps-lock-indicator;
+				outline: none;
+			}
+		}
+		textarea {
+			color: #333;
+			transition: 0.3s;
+			margin-top: 10px;
+			padding-left: 20px;
+			padding-top: 20px;
+			width: 100%;
+			border-radius: 4px;
+			height: 200px;
+			background: #f7f7f7;
+			border: 1px solid #eee;
+			font-size: 14px;
+			&:focus {
+				border-color: rgb(2, 168, 243) !important;
+				-webkit-appearance: caps-lock-indicator;
+				outline: none;
+			}	
+		}
+		input::-webkit-input-placeholder,
+		textarea::-webkit-input-placeholder {
+			color: rgba(0,0,0,.2);
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		button {
+			margin-top: 20px;
+			border: none;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.alert {
+		border-color: #ddd - #222;
+	}
+}
+
+///////////////////////////////////////////////////	tablet devices
+@media  (min-width : 768px)  {
+	
+}
+
+///////////////////////////////////////////////////	laptop devices
+@media  (min-width : 996px) {
+	// not required
+}
+
+///////////////////////////////////////////////////	dekstop devices
+@media  (min-width : 1200px) {
+	
+}

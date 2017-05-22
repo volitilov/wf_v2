@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="col-md-12 page-header">
+	<h3>About me</h3>
+	<ul class="site-breadcrumbs">
+		<li><a href="/">Home</a></li>
+		<li><i class="fa fa-angle-right"></i></li>
+		<li>About</li>
+	</ul>
+</div>
+<div class="col-md-12 about">
+	<div class="col-md-3 about-me-small">
+		<div class="col-xs-12 im">
+			<img src="{% static 'img/foto.jpg' %}"/>
+			<h3>voli<font color="#22ACF5">T</font>ilov</h3>
+			<p>Web developer</p>
+		</div>
+	</div>
+	<div class="col-md-9 about-me-big">
+		<div class="col-xs-12">
+			<h5>About me:</h5>
+			<p>" Люблю веб-разработку и всё, что с ней связано, а ещё люблю музыку — играю на гитаре. 
+			Свободное время предпочитаю проводить с друзьями или за ноутбуком в поисках интересных 
+			web решений "</p>
+		</div>
+		<div class="col-xs-12">
+			<h5>Что умею.</h5>
+			<p>Кроссбраузерно верстаю сайты — фиксированные, резиновые или адаптивные. Придумываю и 
+			стилизую промежуточные состояния интерактивных элементов, если дизайнер их не нарисовал. 
+			Добавляю анимации, если требуется оживить макет. Пишу скрипты для логики на стороне клиента. 
+			Перед сдачей проекта оптимизирую производительность — сжимаю и склеиваю стили, 
+			скрипты и картинки. Использую современные технологии. Пишу чистый и понятный код, который 
+			легко поддерживать — это снижает стоимость будущих правок.</p>
+		</div>
+		<div class="col-xs-12">
+			<h5>Skills:</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+			<ul class="tags">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Less</li>
+				<li>JS</li>
+				<li>EJS</li>
+				<li>jQuery</li>
+				<li>Python</li>
+				<li>flask</li>
+				<li>Django</li>
+				<li>gulp</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}

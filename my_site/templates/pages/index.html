@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="col-xs-12 page-header">
+	<h3>Website Templates</h3>
+	<p>KitGit offers high quality website templates that can be used for personal and commercial projects. The templates are easy to use and easy to customize. Latest templates are responsive.</p>
+</div>
+<div class="col-xs-12 content">
+	<ul>
+		{% for w in works %}
+			{% include 'components/_portfolio-item.html' %}
+		{% endfor %}
+	</ul>
+	<ul>
+
+	</ul>
+	<div class="col-xs-12 text-center btn-all">
+		<a href="portfolio" title="portfolio" class="btn-blue">view all works</a>
+	</div>
+</div>
+{% endblock %}

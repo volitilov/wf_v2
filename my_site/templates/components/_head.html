@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<nav class="navbar head">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+				<span><img src="{% static 'img/foto.jpg' %}"/></span>
+				<span>
+					<h3>voltilov</h3>
+					<h6>Web developer</h6>
+				</span>
+			</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+				<li><a href="{% url 'info' %}">Info</a></li>
+				<li><a href="{% url 'services' %}" class="btn-border">Services</a></li>
+				<li><a href="{% url 'contacts' %}" class="btn-blue">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>

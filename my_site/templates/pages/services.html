@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="col-md-12 page-header">
+	<h3>My services</h3>
+	<ul class="site-breadcrumbs">
+		<li><a href="/">Home</a></li>
+		<li><i class="fa fa-angle-right"></i></li>
+		<li>Services</li>
+	</ul>
+</div>
+<div class="col-md-12 services">
+	<div class="col-xs-12">
+		<p>At the moment I only carry out these services.</p>
+		<ul>
+			<li>Development and interface design</li>
+			<li>Design mobile applications</li>
+			<li>Development and design sites</li>
+			<li>Optimizing websites</li>
+			<li>Redesign</li>
+			<li>Technical project support</li>
+			<li>Responsive design</li>
+			<li>Web animations</li>
+		</ul>
+	</div>
+	<div class="col-xs-12">
+		<h3>Still have questions?</h3>
+		<p>If you have any questions, please visit the <a href="{% url 'info' %}" title="info">information</a> page. 
+		If you were there and you still had questions then you are <a href="{% url 'contacts' %}" title="contacts">here</a>.</p>
+	</div>
+</div>
+{% endblock %}

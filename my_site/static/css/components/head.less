@@ -1,0 +1,93 @@
+/////////////////////////////////////////////////// defaylt mobile devices
+.head {
+	border: none;
+	padding: 14px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background-color: #fff;
+	width: 100%;
+	min-height: 60px;
+	li {
+		a {
+			font-size: 13px;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0px 10px;
+			color: #555;
+			&:hover {
+				color: @color-default;
+				text-decoration: underline;
+			}
+		}
+		.btn-blue, .btn-border {
+			padding: 10px 20px;
+			&:hover {
+				text-decoration: none;
+				box-shadow: none;
+			}
+		}
+		.btn-blue {
+			color: #fff;
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+		.btn-border:hover {
+			color: #fff;
+		}
+	}
+	.navbar-brand {
+		padding: 0px;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 7px;
+		}
+		h3, h6 {
+			padding: 0px;
+			margin: 0px;
+			color: #ddd - #555;
+		}
+		h6 {
+			font-weight: normal;
+		}
+		img {
+			transition: 0.3s;
+			border-radius: 50%;
+			border: 3px solid #ddd - #555;
+			width: 65px;
+			height: auto;
+		}
+		&:hover {
+			img {border-color: @color-default}
+			h3, h6 {color: @color-default !important}
+		}
+	}
+	.navbar-collapse {
+		padding: 0px;
+		margin: 0 auto;
+	}
+	.navbar-right {
+		padding: 0px;
+	}
+}
+///////////////////////////////////////////////////	tablet devices
+@media  (min-width : 768px)  {
+	.head {
+		padding-left: 190px;
+		padding-right: 180px;
+		.navbar-brand {
+			padding-top: 8px;
+		}
+		.navbar-collapse {
+			min-height: 85px;
+		}
+		.navbar-right {
+			padding-top: 20px;
+		}
+	}
+}
+
+///////////////////////////////////////////////////	laptop and dekstop devices
+@media  (min-width : 981px) {
+	
+}

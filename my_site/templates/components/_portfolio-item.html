@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<li>
+	<article class="col-xs-12 col-md-4 portfolio-item">
+		<div class="col-xs-12 media">
+			<a href="{% url 'work' pk=w.pk %}">
+				<img src="{{ w.img_small.url }}"/>
+			</a>
+		</div>
+		<div class="col-xs-12 details">
+			<h2>{{ w.title }}</h2>
+			<a href="{% url 'work' pk=w.pk %}">More details</a>
+		</div>
+	</article>
+</li>

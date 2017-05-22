@@ -1,0 +1,81 @@
+.more {
+	padding: 0px;
+	padding-bottom: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+	.content-name {
+		margin-top: 50px;
+		padding: 0px;
+		background-image: url(../img/dot.png);
+		background-repeat: repeat-x;
+		background-position: center;
+		&:after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 10px;
+			height: 40px;
+			top: 0;
+			right: 0;
+			background-color: #fff;
+		}
+		h4 {
+			padding-left: 10px;
+			width: 170px;
+			color: #777777;
+			font-weight: 500;
+			background: #fff;
+			border: none;
+		}
+	}
+	.content-body {
+		padding: 0px;
+		li {
+			padding: 0px;
+			article {
+				margin: 0 0 20px;
+    			padding: 0 10px;
+			}
+			.media {
+				padding: 0px;
+				overflow: hidden;
+				img {
+					border: 1px solid #eee;
+					border-radius: 3px;
+    				border-bottom: 0;
+    				display: block;
+					width: 100%;
+					box-shadow: #000 0em 0em 0em;
+				}
+			}
+			.details {
+				text-align: center;
+				border: 1px solid #eee;
+				padding: 20px;
+				h2 {
+					font-size: 13px;
+					margin: 0px;
+					font-weight: 500;
+				}
+				a {
+					color: #666;
+					&:hover {
+						text-decoration: underline !important;
+					}
+				}
+			}
+		}
+	}
+}
+///////////////////////////////////////////////////	tablet devices
+@media  (min-width : 768px)  {
+	.more {
+		padding-left: 180px;
+		padding-right: 180px;
+	}
+}
+
+///////////////////////////////////////////////////	laptop and dekstop devices
+@media  (min-width : 981px) {
+	
+}
