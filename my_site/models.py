@@ -21,9 +21,8 @@ class Mesage(models.Model):
 		verbose_name = 'Сообщение'
 		verbose_name_plural = 'Сообщения'
 
-	name = models.CharField(max_length=20, verbose_name='Имя:')
+	name = models.CharField(max_length=30, verbose_name='Имя:')
 	email = models.EmailField(verbose_name='Почт. ящик:')
-	website = models.URLField(verbose_name='Сайт:')
 	text = models.TextField(verbose_name='Сообщение:')
 
 	def __str__(self):

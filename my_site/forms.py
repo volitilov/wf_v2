@@ -1,9 +1,7 @@
-from django.forms import ModelForm
-from models import Mesage
+from django import forms
 
 
-
-class MesageForm(ModelForm):
-	class Meta:
-		model = Mesage
-		
+class  ContactsForm(forms.Form):
+	name = forms.CharField(max_length=30)
+	email = forms.EmailField()
+	message = forms.CharField(widget=forms.Textarea)

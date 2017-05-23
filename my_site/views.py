@@ -3,6 +3,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Mesage, PortfolioItem
+from .forms import ContactsForm
 
 
 # Home page ::::::::::::::::::::::::::::::::::::::::::::::
@@ -41,19 +42,21 @@ def services(request):
 # Contacts page ::::::::::::::::::::::::::::::::::::::::::
 def contacts(request):
 	if request.POST:
-		data = {
-			'name': request.POST['user_name'],
-			'email': request.POST['user_email'],
-			'site': request.POST['user_site'] or 'none',
-			'msg': request.POST['user_msg'], 
-		}
+		form = ContactsForm(request.POST)
+		if form.is_valid():
+			data = {
+				'name': form.cleaned_data['name'],
+				'email': form.cleaned_data['email'],
+				'message': form.cleaned_data['message'],
+			}
 
-		msg = Mesage(	name=data['name'], email=data['email'], 
-						website=data['site'], text=data['msg']	)
-		msg.save()
-		return render(request, 'pages/feedback.html', { 'name': data['name'] })
+			msg = Mesage(	name=data['name'], email=data['email'], text=data['message'])
+			msg.save()
+			return render(request, 'pages/feedback.html', { 'name': data['name'] })
 	else:
-		return render(request, 'pages/contacts.html', {})
+		form = ContactsForm()
+		return render(request, 'pages/contacts.html', {'form': form})
+
 
 
 # Work page ::::::::::::::::::::::::::::::::::::::::::::::

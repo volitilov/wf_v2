@@ -6,7 +6,8 @@ html {
 }
 body {
   margin: 0;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: #F0F4F5;
   font-family: 'Play', sans-serif;
   color: #5555;
 }
