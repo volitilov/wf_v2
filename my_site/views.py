@@ -1,3 +1,4 @@
+from django.template.context_processors import csrf
 from django.shortcuts import redirect, render, get_object_or_404
 from django.core.exceptions import ObjectDoesNotExist 
 from django.http import HttpResponse, HttpResponseRedirect
@@ -41,21 +42,26 @@ def services(request):
 
 # Contacts page ::::::::::::::::::::::::::::::::::::::::::
 def contacts(request):
+	args = {}
+	args.update(csrf(request))
+	args['form'] = ContactsForm
+
 	if request.POST:
 		form = ContactsForm(request.POST)
 		if form.is_valid():
 			data = {
 				'name': form.cleaned_data['name'],
 				'email': form.cleaned_data['email'],
-				'message': form.cleaned_data['message'],
+				'text': form.cleaned_data['text'],
 			}
 
-			msg = Mesage(	name=data['name'], email=data['email'], text=data['message'])
+			msg = Mesage( name=data['name'], email=data['email'], text=data['text'] )
 			msg.save()
+			
 			return render(request, 'pages/feedback.html', { 'name': data['name'] })
 	else:
 		form = ContactsForm()
-		return render(request, 'pages/contacts.html', {'form': form})
+		return render(request, 'pages/contacts.html', args)
 
 
 
