@@ -2,8 +2,9 @@
 <footer>
 	<div class="col-xs-12 footer-body">
 		<div class="col-xs-12 follow">
-			<h4>Foollow me or contact me</h4>
-			<p>Get notified when we release new web templates.</p>
+			<h4>Подписка или контакты</h4>
+			<p>Если интерсны мои произведения искусства) тогда подпишись на меня в соц. сетях,<br>
+			также ты можеш со мной свзаться через соц. сети.</p>
 			<ul>
 				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -19,16 +20,16 @@
 		</div>
 		<div class="col-xs-12 footer-menu">
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Portfolio</i></a></li>
-				<li><a href="#">Info</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Contacts</a></li>
+				<li><a href="/">Главная</a></li>
+				<li><a href="{% url 'about' %}">Обо мне</a></li>
+				<li><a href="{% url 'portfolio' %}">Портфолио</a></li>
+				<li><a href="{% url 'info' %}">Информация</a></li>
+				<li><a href="{% url 'services' %}">Услуги</a></li>
+				<li><a href="{% url 'contacts' %}">Контакты</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col-xs-12 footer-copyright">
-		<p>Copyright  © 2016 <strong><font color="#02a8f3">Pythman</font></strong> All Rights Reserved.</p>
+		<p>Copyright  © 2017 <strong><font color="#02a8f3">Pythman</font></strong> All Rights Reserved.</p>
 	</div>
 </footer>

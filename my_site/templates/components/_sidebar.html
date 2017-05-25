@@ -9,6 +9,26 @@
 		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 		<li><a href="#"><i class="fa fa-behance"></i></a></li>
 	</ul> -->
+	<div class="freebie-btn">
+		<ul>
+			<!-- <li><a class="btn-border likes" href="{{ work.pk }}">
+				<span><i class="material-icons">favorite_border</i></span>
+				<span>Понравилось?</span>
+				<span class="cnt">{{ work.likes }}</span>
+			</a></li> -->
+			<!-- <li><a class="btn-border" href="{{ work.download }}">
+				<span><i class="fa fa-cloud-download"></i></span>
+				<span>Скачать</span>
+				<span class="cnt">{{ work.likes }}</span>
+			</a></li> -->
+
+			<li><a class="btn-blue" href="{{  work.project_url }}" target="_blank">
+				<span><i class="fa fa-eye"></i></span>
+				<span>Посмотреть</span>
+				<!-- <span class="cnt">{{ work.previews }}</span> -->
+			</a></li>
+		</ul>
+	</div>
 	<div class="freebie-meta">
 		<div class="freebie-meta-item">
 			<h5>Дата публикации:</h5>
@@ -28,27 +48,6 @@
 				{% for category in work.category.all %}
 					<li>{{ category }}</li>
 				{% endfor %}
-			</ul>
-		</div>
-		
-		<div class="freebie-btn">
-			<ul>
-				<!-- <li><a class="btn-border likes" href="{{ work.pk }}">
-					<span><i class="material-icons">favorite_border</i></span>
-					<span>Понравилось?</span>
-					<span class="cnt">{{ work.likes }}</span>
-				</a></li> -->
-				<!-- <li><a class="btn-border" href="{{ work.download }}">
-					<span><i class="fa fa-cloud-download"></i></span>
-					<span>Скачать</span>
-					<span class="cnt">{{ work.likes }}</span>
-				</a></li> -->
-
-				<li><a class="btn-blue" href="{{  work.project_url }}" target="_blank">
-					<span><i class="fa fa-eye"></i></span>
-					<span>Посмотреть</span>
-					<!-- <span class="cnt">{{ work.previews }}</span> -->
-				</a></li>
 			</ul>
 		</div>
 	</div>

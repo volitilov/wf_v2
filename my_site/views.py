@@ -49,16 +49,9 @@ def contacts(request):
 	if request.POST:
 		form = ContactsForm(request.POST)
 		if form.is_valid():
-			data = {
-				'name': form.cleaned_data['name'],
-				'email': form.cleaned_data['email'],
-				'text': form.cleaned_data['text'],
-			}
-
-			msg = Mesage( name=data['name'], email=data['email'], text=data['text'] )
-			msg.save()
-			
-			return render(request, 'pages/feedback.html', { 'name': data['name'] })
+			form.save()
+			import pdb; pdb.set_trace()
+			return render(request, 'pages/feedback.html', { 'name': form.cleaned_data['name'] })
 	else:
 		form = ContactsForm()
 		return render(request, 'pages/contacts.html', args)
