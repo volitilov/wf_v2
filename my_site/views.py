@@ -10,7 +10,7 @@ from .forms import ContactsForm
 # Home page ::::::::::::::::::::::::::::::::::::::::::::::
 def home(request):
 	data = {
-		'works': PortfolioItem.objects.all(),
+		'works': PortfolioItem.objects.all()[:3],
 	}
 	
 	return render(request, 'pages/index.html', data)

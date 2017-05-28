@@ -3,11 +3,11 @@
 
 {% block content %}
 <div class="col-md-12 page-header">
-	<h3>Example work</h3>
+	<h4>{{ work.title }}</h4>
 	<ul class="site-breadcrumbs">
-		<li><a href="/">Home</a></li>
+		<li><a href="/">Главная</a></li>
 		<li><i class="fa fa-angle-right"></i></li>
-		<li>Work</li>
+		<li>{{ work.title|slice:':20' }}...</li>
 	</ul>
 </div>
 <div class="col-xs-12 content">
