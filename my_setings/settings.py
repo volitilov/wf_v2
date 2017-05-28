@@ -25,7 +25,7 @@ SECRET_KEY = '+qpi&(d)z^w7lc+19o*+@p1$i(n3_3k(=$hny+wrri-dfvw2jx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['volitilov.pythonanywhere.com']
 
 
 # Application definition
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'my_site',
-    'compressor',
 ]
 
 MIDDLEWARE = [
@@ -125,8 +124,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-
-INTERNAL_IPS = ('127.0.0.1',)
-COMPRESS_PRECOMPILERS = (
-   ('text/less', 'lessc {infile} {outfile}'),
-)
